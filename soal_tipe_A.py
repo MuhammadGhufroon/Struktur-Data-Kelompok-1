@@ -77,8 +77,11 @@ def soal_02_insert_first(dll, data):
 # ======================================================================
 # SOAL 03 -- Insert Last Node
 # ======================================================================
-NIM_03 = "ISI_NIM"
-NAMA_03 = "ISI_NAMA"
+# ======================================================================
+# SOAL 03 -- Insert Last Node
+# ======================================================================
+NIM_03 = "108102500031"
+NAMA_03 = "NAUFALIA NAFISA"
 
 def soal_03_insert_last(dll, data):
     """
@@ -92,7 +95,24 @@ def soal_03_insert_last(dll, data):
     dll.last.next = P
     dll.last = P
     """
-    pass  # <-- tulis kode Anda di sini
+    #Inisiasi node#
+
+    n1 = Node("A")
+    n2 = Node("B")
+    n3 = Node("C")
+
+    n1.next = n2
+    n2.next = n3
+    n2.prev = n1
+    n3.prev = n2
+
+    dll.first = n1
+    dll.last = n3
+    P = Node("F")
+    P.prev = dll.last
+    dll.last.next = P
+    dll.last = P
+
 
 # ======================================================================
 # SOAL 04 -- Insert After Target Node
