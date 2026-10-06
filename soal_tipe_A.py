@@ -263,8 +263,8 @@ def soal_10_delete_last(dll):
 # ======================================================================
 # SOAL 11 -- Delete Target Node
 # ======================================================================
-NIM_11 = "ISI_NIM"
-NAMA_11 = "ISI_NAMA"
+NIM_11 = "108102500052"
+NAMA_11 = "TESSAGYANI DIVANTY TODE"
 
 def soal_11_delete_node(dll, node_target):
     """
@@ -278,7 +278,10 @@ def soal_11_delete_node(dll, node_target):
     P.next = Q
     Q.prev = P
     """
-    pass  # <-- tulis kode Anda di sini
+    P = node_target.prev
+    Q = node_target.next
+    P.next = Q
+    Q.prev = P
 
 
 if __name__ == "__main__":
