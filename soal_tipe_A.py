@@ -49,8 +49,8 @@ def soal_01_insert_empty(dll, data):
 # ======================================================================
 # SOAL 02 -- Insert First Node
 # ======================================================================
-NIM_02 = "108102530005"
-NAMA_02 = "MUHAMMAD_GHUFROON"
+NIM_02 = "ISI_NIM"
+NAMA_02 = "ISI_NAMA"
 
 def soal_02_insert_first(dll, data):
     """
@@ -64,15 +64,7 @@ def soal_02_insert_first(dll, data):
     dll.first.prev = P
     dll.first = P
     """
-    P = Node(data)
-    if dll.first != None:
-        P.next = dll.first
-        dll.first.prev = P
-        dll.first = P
-    else:
-        dll.first = P
-        dll.last = P
-
+    pass  # <-- tulis kode Anda di sini
 
 # ======================================================================
 # SOAL 03 -- Insert Last Node
@@ -183,8 +175,8 @@ def soal_06_traverse_maju(dll):
 # ======================================================================
 # SOAL 07 -- Traverse Mundur
 # ======================================================================
-NIM_07 = "ISI_NIM"
-NAMA_07 = "ISI_NAMA"
+NIM_07 = "108102530010"
+NAMA_07 = "SELFI NUR ASYIKIN"
 
 def soal_07_traverse_mundur(dll):
     """
@@ -200,7 +192,17 @@ def soal_07_traverse_mundur(dll):
         P = P.prev
     RETURN hasil
     """
-    pass  # <-- tulis kode Anda di sini
+    hasil = ""
+    P = dll.last
+
+    while P is not None:
+        if hasil == "":
+            hasil = P.info
+        else:
+            hasil = hasil + " <-> " + P.info
+        P = P.prev
+
+    return hasil # <-- tulis kode Anda di sini
 
 # ======================================================================
 # SOAL 08 -- Search Target
