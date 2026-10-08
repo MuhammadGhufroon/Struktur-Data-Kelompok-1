@@ -129,8 +129,8 @@ def soal_04_insert_after(dll, node_target, data):
 # ======================================================================
 # SOAL 05 -- Insert Before Target Node
 # ======================================================================
-NIM_05 = "ISI_NIM"
-NAMA_05 = "ISI_NAMA"
+NIM_05 = "108102500034"
+NAMA_05 = "Rayana Bintang Rahmanda"
 
 def soal_05_insert_before(dll, node_target, data):
     """
@@ -146,7 +146,18 @@ def soal_05_insert_before(dll, node_target, data):
     node_target.prev = P
     Q.next = P
     """
-    pass  # <-- tulis kode Anda di sini
+    P = Node(data)
+    Q = node_target.prev
+
+    P.next = node_target
+    P.prev = Q
+    node_target.prev = P
+
+    if Q is not None:
+        Q.next = P
+    else:
+        dll.head = P
+    return P# <-- tulis kode Anda di sini
 
 # ======================================================================
 # SOAL 06 -- Traverse Maju
@@ -168,7 +179,7 @@ def soal_06_traverse_maju(dll):
         P = P.next
     RETURN hasil
     """
-    pass  # <-- tulis kode Anda di sini
+    pass # <-- tulis kode Anda di sini
 
 # ======================================================================
 # SOAL 07 -- Traverse Mundur
