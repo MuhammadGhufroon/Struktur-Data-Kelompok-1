@@ -66,9 +66,7 @@ def soal_02_insert_first(dll, data):
     """
     pass  # <-- tulis kode Anda di sini
 
-# ======================================================================
-# SOAL 03 -- Insert Last Node
-# ======================================================================
+
 # ======================================================================
 # SOAL 03 -- Insert Last Node
 # ======================================================================
@@ -224,7 +222,12 @@ def soal_08_search(dll, target):
         P = P.next
     RETURN None
     """
-    pass  # <-- tulis kode Anda di sini
+    P = dll.first
+    while P is not None:
+        if P.info == target:
+            return P
+        P = P.next
+    return None
 
 # ======================================================================
 # SOAL 09 -- Delete First Node
