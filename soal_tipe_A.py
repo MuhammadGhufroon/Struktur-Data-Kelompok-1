@@ -166,8 +166,8 @@ def soal_05_insert_before(dll, node_target, data):
 # ======================================================================
 # SOAL 06 -- Traverse Maju
 # ======================================================================
-NIM_06 = "ISI_NIM"
-NAMA_06 = "ISI_NAMA"
+NIM_06 = "108102500020"
+NAMA_06 = "Naufal Rafif Yumna"
 
 def soal_06_traverse_maju(dll):
     """
@@ -183,7 +183,15 @@ def soal_06_traverse_maju(dll):
         P = P.next
     RETURN hasil
     """
-    pass # <-- tulis kode Anda di sini
+    hasil = ""
+    P = dll.first
+    while P is not None:
+        if hasil == "":
+            hasil = str(P.info)
+        else:
+            hasil = hasil + " <-> " + str(P.info)
+        P = P.next
+    return hasil
 
 # ======================================================================
 # SOAL 07 -- Traverse Mundur
