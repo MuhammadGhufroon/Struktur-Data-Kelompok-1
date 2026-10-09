@@ -30,8 +30,8 @@ from helper import Node, DoublyLinkedList, jalankan_pengujian
 # ======================================================================
 # SOAL 01 -- Insert Empty Node
 # ======================================================================
-NIM_01 = "ISI_NIM"
-NAMA_01 = "ISI_NAMA"
+NIM_01 = "108102530006"
+NAMA_01 = "BAIQ JIHAN KUSUMA"
 
 def soal_01_insert_empty(dll, data):
     """
@@ -44,7 +44,11 @@ def soal_01_insert_empty(dll, data):
     dll.first = P
     dll.last = P
     """
-    pass  # <-- tulis kode Anda di sini
+  P = Node(data)
+    P.prev = None
+    P.next = None
+    dll.first = P
+    dll.last = P
 
 # ======================================================================
 # SOAL 02 -- Insert First Node
