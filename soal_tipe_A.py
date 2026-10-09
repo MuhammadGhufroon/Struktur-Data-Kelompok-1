@@ -228,8 +228,8 @@ def soal_07_traverse_mundur(dll):
 # ======================================================================
 # SOAL 08 -- Search Target
 # ======================================================================
-NIM_08 = "ISI_NIM"
-NAMA_08 = "ISI_NAMA"
+NIM_08 = "108102500036"
+NAMA_08 = "Nabila Amandanda Fijienisa"
 
 def soal_08_search(dll, target):
     """
