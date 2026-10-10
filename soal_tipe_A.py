@@ -53,8 +53,8 @@ def soal_01_insert_empty(dll, data):
 # ======================================================================
 # SOAL 02 -- Insert First Node
 # ======================================================================
-NIM_02 = "ISI_NIM"
-NAMA_02 = "ISI_NAMA"
+NIM_02 = "108102530005"
+NAMA_02 = "MUHAMMAD GHUFROON"
 
 def soal_02_insert_first(dll, data):
     """
@@ -68,7 +68,14 @@ def soal_02_insert_first(dll, data):
     dll.first.prev = P
     dll.first = P
     """
-    pass  # <-- tulis kode Anda di sini
+    P = Node(data)
+    if dll.first != None:
+        P.next = dll.first
+        dll.first.prev = P
+        dll.first = P
+    else:
+        dll.first = P
+        dll.last = P
 
 
 # ======================================================================
