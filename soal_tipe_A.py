@@ -118,8 +118,8 @@ def soal_03_insert_last(dll, data):
 # ======================================================================
 # SOAL 04 -- Insert After Target Node
 # ======================================================================
-NIM_04 = "ISI_NIM"
-NAMA_04 = "ISI_NAMA"
+NIM_04 = "108102500013"
+NAMA_04 = "Naura Alifa Hernawan"
 
 def soal_04_insert_after(dll, node_target, data):
     """
@@ -135,7 +135,13 @@ def soal_04_insert_after(dll, node_target, data):
     node_target.next = P
     Q.prev = P
     """
-    pass  # <-- tulis kode Anda di sini
+    P = Node(data)
+    Q = node_target.next
+    P.prev = node_target
+    P.next = Q
+    node_target.next = P
+    if Q is not None:
+        Q.prev = P
 
 # ======================================================================
 # SOAL 05 -- Insert Before Target Node
